@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'ExportController@showIndex');
+Route::get('/certificate', 'ExportController@showCertificate');
+Route::post('/export', 'ExportController@export');

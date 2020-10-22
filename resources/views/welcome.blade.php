@@ -76,8 +76,14 @@
                 </div>
 
                 <div class="links">
-                    <form action="/export" method="post">
+                    <form action="/export" method="post" enctype="multipart/form-data">
                         @csrf
+
+                        <div class="form-group">
+                            <label for="attendee">Please import attendee list from zoom:</label>
+                            <input class="form-control" type="file" name="attendee" id="attendee" accept=".csv" required>
+                        </div>
+                        
 
                         <button type="submit" class="btn btn-primary">Export</button>
                     </form>
